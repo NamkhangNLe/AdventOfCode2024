@@ -68,31 +68,35 @@ def main():
 
 def solve(data):
     reports = 0
-    safe, tolerate = False, False
     lines = data.strip().split('\n')
-    # print(lines)
     for line in lines:
         nums = [int(num) for num in line.split() if num]
+        n = len(nums)
         print(nums)
         
-        n = len(nums)
-        if nums[n - 1] < nums[0]: ## decreasing
-            for i in range(1, n):
-                safe = True
-                tolerate = False
-                if nums[i - 1] <= nums[i] or abs(nums[i] - nums[i - 1]) > 3:
-                    safe = False
-                    tolerate = True
-                    break
-        else: #nums[0] < nums[n - 1] increasing
-            for i in range(1, n):
-                safe = True
-                tolerate = False
-                if nums[i - 1] >= nums[i] or abs(nums[i - 1] - nums[i]) > 3:
-                    safe = False
-                    tolerate = True
-                    break
-        if safe or tolerate:
+        if is_safe(nums):
             reports += 1
+        else:
+            for i in range(n):
+                temp_nums = nums[:i] + nums[i+1:]
+                if is_safe(temp_nums):
+                    reports += 1
+                    break
         print(reports)
+
+def is_safe(nums):
+    n = len(nums)
+    if n < 2:
+        return True
+    
+    if nums[n - 1] < nums[0]:  # decreasing
+        for i in range(1, n):
+            if nums[i - 1] <= nums[i] or abs(nums[i] - nums[i - 1]) > 3:
+                return False
+    else:  # increasing
+        for i in range(1, n):
+            if nums[i - 1] >= nums[i] or abs(nums[i - 1] - nums[i]) > 3:
+                return False
+    return True
+
 main()
