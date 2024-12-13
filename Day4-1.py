@@ -55,5 +55,5 @@ def main():
     solve(data)
 
 def solve(data):
-    hi = 0
+    
 main()
