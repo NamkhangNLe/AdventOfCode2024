@@ -2,7 +2,9 @@
 --- Part Two ---
 Fortunately, the Elves are trying to order so much fence that they qualify for a bulk discount!
 
-Under the bulk discount, instead of using the perimeter to calculate the price, you need to use the number of sides each region has. Each straight section of fence counts as a side, regardless of how long it is.
+Under the bulk discount, instead of using the perimeter to calculate the price, 
+you need to use the number of sides each region has. 
+Each straight section of fence counts as a side, regardless of how long it is.
 
 Consider this example again:
 
@@ -10,9 +12,12 @@ AAAA
 BBCD
 BBCC
 EEEC
-The region containing type A plants has 4 sides, as does each of the regions containing plants of type B, D, and E. However, the more complex region containing the plants of type C has 8 sides!
+The region containing type A plants has 4 sides, 
+as does each of the regions containing plants of type B, D, and E. 
+However, the more complex region containing the plants of type C has 8 sides!
 
-Using the new method of calculating the per-region price by multiplying the region's area by its number of sides, regions A through E have prices 16, 16, 32, 4, and 12, respectively, for a total price of 80.
+Using the new method of calculating the per-region price by multiplying the region's area by its number of sides, 
+regions A through E have prices 16, 16, 32, 4, and 12, respectively, for a total price of 80.
 
 The second example above (full of type X and O plants) would have a total price of 436.
 
@@ -23,7 +28,8 @@ EXXXX
 EEEEE
 EXXXX
 EEEEE
-The E-shaped region has an area of 17 and 12 sides for a price of 204. Including the two regions full of type X plants, this map has a total price of 236.
+The E-shaped region has an area of 17 and 12 sides for a price of 204. 
+Including the two regions full of type X plants, this map has a total price of 236.
 
 This map has a total price of 368:
 
@@ -33,7 +39,12 @@ AAABBA
 ABBAAA
 ABBAAA
 AAAAAA
-It includes two regions full of type B plants (each with 4 sides) and a single region full of type A plants (with 4 sides on the outside and 8 more sides on the inside, a total of 12 sides). Be especially careful when counting the fence around regions like the one full of type A plants; in particular, each section of fence has an in-side and an out-side, so the fence does not connect across the middle of the region (where the two B regions touch diagonally). (The Elves would have used the Möbius Fencing Company instead, but their contract terms were too one-sided.)
+It includes two regions full of type B plants (each with 4 sides) and a single region full of type A plants 
+(with 4 sides on the outside and 8 more sides on the inside, a total of 12 sides). 
+Be especially careful when counting the fence around regions like the one full of type A plants; 
+in particular, each section of fence has an in-side and an out-side, 
+so the fence does not connect across the middle of the region (where the two B regions touch diagonally). 
+(The Elves would have used the Möbius Fencing Company instead, but their contract terms were too one-sided.)
 
 The larger example from before now has the following updated prices:
 
